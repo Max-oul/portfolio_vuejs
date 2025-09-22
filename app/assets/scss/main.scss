@@ -1,0 +1,21 @@
+//variables
+@import 'variables';
+@import 'mixins';
+
+// Components
+@import 'components/layout';
+@import 'components/navigation';
+@import 'components/pages';
+
+//global styles
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family;
+    line-height:1.6;
+    color: $text-color;
+}
