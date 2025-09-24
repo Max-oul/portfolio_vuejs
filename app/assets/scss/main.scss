@@ -1,21 +1,19 @@
-//variables
-@import 'variables';
-@import 'mixins';
+// Variables et mixins avec @use
+@use 'variables';
+@use 'mixins';
 
-// Components
-@import 'components/layout';
-@import 'components/navigation';
-@import 'components/pages';
+// Components avec @use
+@use 'components/pages';
 
-//global styles
-*{
-    margin:0;
-    padding:0;
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: $font-family;
-    line-height:1.6;
-    color: $text-color;
+body {
+    font-family: variables.$font-family;
+    line-height: 1.6;
+    color: variables.$text-color;
 }

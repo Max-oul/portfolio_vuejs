@@ -1,19 +1,23 @@
+@use '../variables';
+@use '../mixins';
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 $spacing-sm;
+  padding: 0 variables.$spacing-sm;
 }
 
 main {
   min-height: calc(100vh - 200px);
-  padding: $spacing-md 0;
+  padding: variables.$spacing-md 0;
+  background-color: variables.$bg-color;
 }
 
 footer {
-  background-color: $secondary-color;
+  background-color: variables.$secondary-color;
   color: white;
   text-align: center;
-  padding: $spacing-sm 0;
+  padding: variables.$spacing-sm 0;
   margin-top: auto;
 }
 
@@ -23,56 +27,56 @@ footer {
   margin: 0 auto;
   
   h1 {
-    color: $secondary-color;
-    margin-bottom: $spacing-md;
-    font-size: $font-size-h1;
+    color: variables.$secondary-color;
+    margin-bottom: variables.$spacing-md;
+    font-size: variables.$font-size-h1;
   }
   
   h2 {
-    color: $primary-color;
-    margin: $spacing-md 0 $spacing-sm 0;
-    font-size: $font-size-h2;
+    color: variables.$primary-color;
+    margin: variables.$spacing-md 0 variables.$spacing-sm 0;
+    font-size: variables.$font-size-h2;
   }
   
   h3 {
-    margin: $spacing-sm 0;
-    font-size: $font-size-h3;
+    margin: variables.$spacing-sm 0;
+    font-size: variables.$font-size-h3;
   }
   
   p {
-    margin-bottom: $spacing-sm;
+    margin-bottom: variables.$spacing-sm;
   }
   
   ul {
-    padding-left: $spacing-md;
-    margin-bottom: $spacing-sm;
+    padding-left: variables.$spacing-md;
+    margin-bottom: variables.$spacing-sm;
   }
 }
 
 // Contact form styles
 .contact-form {
   max-width: 600px;
-  margin: $spacing-md auto;
+  margin: variables.$spacing-md auto;
   
   .form-group {
-    margin-bottom: $spacing-sm;
-    
+    margin-bottom: variables.$spacing-sm;
+
     label {
       display: block;
-      margin-bottom: $spacing-xs;
+      margin-bottom: variables.$spacing-xs;
       font-weight: bold;
     }
     
     input, textarea {
       width: 100%;
-      padding: $spacing-xs;
+      padding: variables.$spacing-xs;
       border: 1px solid #ddd;
       border-radius: 4px;
-      font-size: $font-size-base;
-      
+      font-size: variables.$font-size-base;
+
       &:focus {
         outline: none;
-        border-color: $primary-color;
+        border-color: variables.$primary-color;
       }
     }
     
@@ -83,8 +87,8 @@ footer {
   }
   
   button {
-    @include button($primary-color);
-    font-size: $font-size-base;
+    @include mixins.button(variables.$primary-color);
+    font-size: variables.$font-size-base;
   }
 }
 
@@ -92,13 +96,13 @@ footer {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: $spacing-md;
-  margin-top: $spacing-md;
-  
+  gap: variables.$spacing-md;
+  margin-top: variables.$spacing-md;
+
   article {
     background: white;
     border-radius: 8px;
-    padding: $spacing-md;
+    padding: variables.$spacing-md;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
