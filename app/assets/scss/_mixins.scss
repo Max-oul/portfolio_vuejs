@@ -1,27 +1,30 @@
+// Import des variables avec @use
+@use 'variables';
+
 // Responsive breakpoints
 @mixin mobile {
-  @media (max-width: #{$mobile - 1px}) {
+  @media (max-width: #{variables.$mobile - 1px}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+  @media (min-width: #{variables.$mobile}) and (max-width: #{variables.$tablet - 1px}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: #{variables.$desktop}) {
     @content;
   }
 }
 
 // Button mixin
-@mixin button($bg-color: $primary-color, $text-color: white) {
+@mixin button($bg-color: variables.$primary-color, $text-color: white) {
   background-color: $bg-color;
   color: $text-color;
-  padding: $spacing-xs $spacing-sm;
+  padding: variables.$spacing-xs variables.$spacing-sm;
   border: none;
   border-radius: 4px;
   cursor: pointer;

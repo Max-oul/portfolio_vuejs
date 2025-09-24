@@ -1,15 +1,6 @@
 <template>
   <div>
-    <nav>
-      <div class="container">
-        <ul>
-          <li><NuxtLink to="/">About</NuxtLink></li>
-          <li><NuxtLink to="/work">Work</NuxtLink></li>
-          <li><NuxtLink to="/contact">Contact</NuxtLink></li>
-        </ul>
-      </div>
-    </nav>
-    
+    <Navbar />
     <main>
       <div class="container">
         <NuxtPage />
@@ -25,5 +16,5 @@
 </template>
 
 <style lang="scss">
-@import '~/assets/scss/main.scss';
+@use '~/assets/scss/main.scss';
 </style>
